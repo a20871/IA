@@ -1,3 +1,5 @@
+from typing import List
+
 dias, blocos = 5, 5
 horario_grid = [[0 for x in range(dias)]for y in range(blocos)]
 
@@ -15,33 +17,22 @@ professores = ["Ze", "Quim", "To", "Manel"]
 
 
 
-profs_grid = [[0 for x in range(len(disciplinas))]for y in range(len(professores))]
+profs_grid: list[list[int]] = [[0 for x in range(len(disciplinas))]for y in range(len(professores))]
 for i in range(len(disciplinas)):
     for j in range(len(professores)):
         print (str(i)+" "+str(j))
 
-
-profs_grid[0][7]=1
-profs_grid[0][1]=1
-profs_grid[3][2]=1
-profs_grid[0][3]=1
-profs_grid[0][4]=1
-profs_grid[2][2]=1
-profs_grid[2][6]=1
-profs_grid[1][7]=1
-profs_grid[0][8]=1
+profs_grid[0][7] = 1
+profs_grid[0][1] = 1
+profs_grid[3][2] = 1
+profs_grid[0][3] = 1
+profs_grid[0][4] = 1
+profs_grid[2][2] = 1
+profs_grid[2][6] = 1
+profs_grid[1][7] = 1
+profs_grid[0][8] = 1
 
 for i in range(len(professores)):
     for j in range(len(disciplinas)):
         if profs_grid[i][j] != 0:
             print (str(professores[i])+" "+str(disciplinas[j]))
-
-profs_grid[0][0]=1
-profs_grid[1][0]=1
-profs_grid[2][3]=1
-profs_grid[3][0]=1
-profs_grid[4][0]=1
-profs_grid[5][2]=1
-profs_grid[6][2]=1
-profs_grid[7][1]=1
-profs_grid[8][0]=1
